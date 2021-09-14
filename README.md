@@ -6,4 +6,4 @@ Kelompok 6 --
 Hemylia Awanda Nur Jannah --
 Aliza Husna Izzati --
 Farhan Dwi Anugrah --
-Muhammad Ladzi Safroni --
+Muhammad Ladzi Safroni
