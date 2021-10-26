@@ -31,7 +31,7 @@
             <h3><span>COVID-19 Alert</span></h3>
             <h1>COVID-19 Vaccine To Prevent Corona Virus</h1>
             <p>Marilah kita lindungi diri kita dan keluarga serta orang sekitar dengan berpartisipasi mengikuti vaksinasi Covid-19.</p>
-            <a href=" {{ route('register') }}" class="btn">Pendaftaran Vaksin</a>   
+            <a href="{{ route('register') }}" class="btn">Pendaftaran Vaksin</a>   
         </div>
 
         <div class="image">

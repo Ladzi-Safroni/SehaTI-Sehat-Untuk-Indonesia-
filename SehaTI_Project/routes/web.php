@@ -23,7 +23,9 @@ Route::get('/admin', function () {
 Route::get('/user', function () {
     return view('master.user');
 });	
-
+Route::get('/pengajuan', function () {
+    return view('master.pengajuan');
+});	
 Route::get('/pengumuman', function () {
     return view('master.pengumuman');
 });	

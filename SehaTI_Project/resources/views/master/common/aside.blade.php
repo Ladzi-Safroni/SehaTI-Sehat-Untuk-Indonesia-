@@ -28,6 +28,7 @@
             </a>
           </li>
 
+        @if (auth()->user()->role == 0)
         <li class="nav-heading text-white my-2">DATA USER</li>
           <li class="nav-item">
             <a href="{{ url('/user') }}" class="nav-link">
@@ -37,7 +38,9 @@
               </p>
             </a>
           </li>
+        @endif
 
+        @if (auth()->user()->role == 1)
         <li class="nav-heading text-white my-2">DATA ADMIN</li>
           <li class="nav-item">
             <a href="{{ url('/admin') }}" class="nav-link">
@@ -47,7 +50,8 @@
               </p>
             </a>
           </li>
-
+        @endif
+        
         <li class="nav-heading text-white my-2">REPORT</li>
         <li class="nav-item">
             <a href="{{ url('/pengumuman') }}" class="nav-link">

@@ -47,9 +47,9 @@
           <br> 
       </p>
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      <a href="{{ url('pengajuan') }}" type="button" class="btn btn-primary">
         Pendaftaran Vaksinasi
-      </button>
+      </a>
 
     </div>  
   </div>
