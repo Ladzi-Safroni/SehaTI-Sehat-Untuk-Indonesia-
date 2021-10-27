@@ -2,23 +2,24 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-      <h3><span class="fas fa-shield-virus"></span> Seha<span>TI.</span></h3><h6>Sehat Untuk Indonesia</h6>
+      <img src="../AdminLTE/dist/img/virus1.png" alt="Logo" class="brand-image img-circle elevation-" style="opacity: .8">
+      <span class="brand-text font-weight-light">SehaTI.</span>
     </a>
-
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex font-weight-bold">
-      <div class="info">
-        <a href="#" class="d-block"> Sistem Informasi <br> Pendaftaran Vaksinasi</a>
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../AdminLTE/dist/img/avatar3.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">{{  Auth::user()->name  }}</a>
+        </div>
       </div>
-    </div>
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="{{ url('/home') }}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -29,7 +30,7 @@
           </li>
 
         @if (auth()->user()->role == 0)
-        <li class="nav-heading text-white my-2">DATA USER</li>
+        <li class="nav-header text-white">DATA USER</li>
           <li class="nav-item">
             <a href="{{ url('/user') }}" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
@@ -41,7 +42,7 @@
         @endif
 
         @if (auth()->user()->role == 1)
-        <li class="nav-heading text-white my-2">DATA ADMIN</li>
+        <li class="nav-header text-white">DATA ADMIN</li>
           <li class="nav-item">
             <a href="{{ url('/admin') }}" class="nav-link">
               <i class="nav-icon far fa-envelope"></i>
@@ -51,8 +52,8 @@
             </a>
           </li>
         @endif
-        
-        <li class="nav-heading text-white my-2">REPORT</li>
+
+        <li class="nav-header text-white">REPORT</li>
         <li class="nav-item">
             <a href="{{ url('/pengumuman') }}" class="nav-link">
               <i class="nav-icon fas fa-bullhorn"></i>

@@ -3,14 +3,14 @@
 
 @section('pengumuman')
 
-<!-- Content Wrapper. Contains page content -->
+  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Hi, {{  Auth::user()->name  }}</h1>
+            <h1>Hii {{  Auth::user()->name  }}</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -21,63 +21,37 @@
         </div>
       </div><!-- /.container-fluid -->
     </section>
-
+    <br><br><br>
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-        <table class="table table-hover">
-          <!-- /.col -->
-          <div class="col-md-12">
+      <div class="error-page">
+        <h2 class="headline text-warning"> 404</h2>
 
-              <!-- /.card-header -->
-              <div class="card-body p-0">
-                <table class="table table-striped text-center">
-                  <thead class="thead-dark">
-                    <tr>
-                      <th style="width: 10px">No.</th>
-                      <th>NIK</th>
-                      <th>Nama Lengkap</th>
-                      <th>Jenis Kelamin</th>
-                      <th>Alamat Tinggal</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1.</td>
-                      <td>35151xxxxxxxxxxx</td>
-                      <td>Muhammad Safroni</td>
-                      <td>Laki-Laki</td>
-                      <td>Bebekan Pereng Rt.12 Rw.04</td>
-                    </tr>
-                    <tr>
-                      <td>2.</td>
-                      <td>35151xxxxxxxxxxx</td>
-                      <td>Muhammad Safroni</td>
-                      <td>Laki-Laki</td>
-                      <td>Bebekan Pereng Rt.12 Rw.04</td>
-                    </tr>
-                    <tr>
-                      <td>3.</td>
-                      <td>35151xxxxxxxxxxx</td>
-                      <td>Muhammad Safroni</td>
-                      <td>Laki-Laki</td>
-                      <td>Bebekan Pereng Rt.12 Rw.04</td>
-                    </tr>
-                  </tbody>
-                </table>
+        <div class="error-content">
+          <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oops! Page not found.</h3>
+
+          <p>
+            Kami tidak dapat menemukan halaman yang Anda cari. Sementara itu, Anda mungkin <a href="{{ url('/home') }}">kembali ke dashboard</a> atau coba gunakan formulir pencarian.
+          </p>
+
+          <form class="search-form">
+            <div class="input-group">
+              <input type="text" name="search" class="form-control" placeholder="Search">
+
+              <div class="input-group-append">
+                <button type="submit" name="submit" class="btn btn-warning"><i class="fas fa-search"></i>
+                </button>
               </div>
-              <!-- /.card-body -->
-
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-        </table>
+            </div>
+            <!-- /.input-group -->
+          </form>
         </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
+        <!-- /.error-content -->
+      </div>
+      <!-- /.error-page -->
     </section>
     <!-- /.content -->
   </div>
+  <!-- /.content-wrapper -->
 
 @endsection
