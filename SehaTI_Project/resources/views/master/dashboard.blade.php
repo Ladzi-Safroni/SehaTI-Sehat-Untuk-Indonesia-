@@ -27,14 +27,16 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>0</h3>
+                <h3>1</h3>
 
                 <p>ADMIN</p>
               </div>
               <div class="icon">
                 <i class="fas fa-user-cog"></i>
               </div>
+              @if (Auth::user()->role == 1)
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              @endif
             </div>
           </div>
           <!-- ./col -->
@@ -42,14 +44,16 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>0</h3>
+                <h3>1</h3>
 
                 <p>USER</p>
               </div>
               <div class="icon">
                 <i class="fas fa-users"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              @if (Auth::user()->role == 1)
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>     
+              @endif
             </div>
           </div>
           <!-- ./col -->
@@ -64,7 +68,9 @@
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              @if (Auth::user()->role == 1)
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> 
+              @endif
             </div>
           </div>
           <!-- ./col -->
@@ -79,7 +85,9 @@
               <div class="icon">
                 <i class="fas fa-user-check"></i>
               </div>
+              @if (Auth::user()->role == 1)
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              @endif
             </div>
           </div>
           <!-- ./col -->

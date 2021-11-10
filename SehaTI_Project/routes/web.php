@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ApproveController;
+use App\Http\Controllers\PengajuanController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,22 +19,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});	
+});
 
-Route::get('/admin', function () {
-    return view('master.admin');
-});	
-Route::get('/user', function () {
-    return view('master.user');
-});	
-Route::get('/pengajuan', function () {
-    return view('master.pengajuan');
-});	
-Route::get('/pengumuman', function () {
-    return view('master.pengumuman');
-});	
+Route::get('/admin', [AdminController::class, 'index']);
+Route::post('/admin/approve/{id}', [AdminController::class, 'approve']);
+
+Route::get('/user', [PengajuanController::class, 'index']);
+Route::get('/pengajuan/detail/{id}', [PengajuanController::class, 'show']);
+Route::get('/pengajuan', [PengajuanController::class, 'create']);
+Route::post('/pengajuan', [PengajuanController::class, 'store']);
+
+Route::get('/pengumuman', [ApproveController::class, 'index']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
