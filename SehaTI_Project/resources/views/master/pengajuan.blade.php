@@ -73,20 +73,15 @@
                     <input type="text" class="form-control" name="alamat" placeholder="Input Alamat Tinggal">
 
                     <label for="exampleInputFile" class="mt-2">Scan KTP</label>
-                    <div class="input-group">
                       <div class="custom-file">
                         <input type="file" class="form-control" name="ktp" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile"></label>
                       </div>
-                    </div>
 
                     <label for="exampleInputFile" class="mt-2">Scan KK</label>
-                    <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" name="kk" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile"></label>
+                        <input type="file" class="form-control" name="kk" id="exampleInputFile">
                       </div>
-                    </div>
+                    <br>
                     <br>
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="exampleCheck1">

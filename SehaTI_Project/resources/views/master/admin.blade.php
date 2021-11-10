@@ -50,7 +50,7 @@
                 <tbody>
                   @foreach ($pengajuans as $pengajuan)
                   <tr>
-                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $pengajuans->count()*($pengajuans->currentPage() -1)+$loop->iteration }}</td>
                     <td>{{ $pengajuan->nik }}</td>
                     <td>{{ $pengajuan->namaLengkap }}</td>
                     <td>{{ $pengajuan->tempat }}</td>
@@ -81,6 +81,9 @@
           </div>
           <!-- /.col -->
         </table>
+      <div class="d-flex justify-content-center">
+        {{ $pengajuans->links() }}
+      </div>
       </div>
       <!-- /.row -->
     </div><!-- /.container-fluid -->
