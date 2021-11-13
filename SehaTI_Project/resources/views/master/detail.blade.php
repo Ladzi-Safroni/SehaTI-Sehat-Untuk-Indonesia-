@@ -57,10 +57,10 @@
               <img src="{{ asset( 'storage/'.$pengajuan->kk) }}" alt="" class="img-responsive" width="70%">
             </div>
           </div>
+          <div class="modal-footer">
+            <a href="/admin" type="button" class="btn btn-danger" data-dismiss="modal">Tidak</a>
+            <button type="submit" class="btn btn-success">Setujui</button>
         </div>
-        <div class="modal-footer">
-          <a href="/admin" type="button" class="btn btn-danger" data-dismiss="modal">Tidak</a>
-          <button type="submit" class="btn btn-success">Setujui</button>
         </div>
       </form>
       <!-- /.row -->

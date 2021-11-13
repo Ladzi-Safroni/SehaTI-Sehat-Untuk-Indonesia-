@@ -21,6 +21,6 @@ class AdminController extends Controller
         ]);
         $status = Pengajuan::find($id);
         $status->update(['status' => 1]);
-        return redirect('/admin');
+        return redirect('/admin')->with('success', 'Anda telah Menyetujui Pengajuan Vaksinasi');
     }
 }

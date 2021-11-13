@@ -27,7 +27,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>1</h3>
+                <h3>{{ $admins}}</h3>
 
                 <p>ADMIN</p>
               </div>
@@ -44,7 +44,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>1</h3>
+                <h3>{{$users}}</h3>
 
                 <p>USER</p>
               </div>
@@ -61,7 +61,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{count($pengajuans)}}</h3>
 
                 <p>USER SUBMIT</p>
               </div>
@@ -78,7 +78,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{count($approves)}}</h3>
 
                 <p>USER ACCEPTED</p>
               </div>

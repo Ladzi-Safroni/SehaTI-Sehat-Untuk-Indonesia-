@@ -48,7 +48,11 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $acc->pengajuan->nik }}</td>
                     <td>{{ $acc->pengajuan->namaLengkap }}</td>
-                    <td>{{ $acc->pengajuan->jk }}</td>
+                    @if ($acc->pengajuan->jk == "L")
+                    <td>Laki-Laki</td>
+                    @else
+                    <td>Perempuan</td>
+                    @endif
                     <td>{{ $acc->pengajuan->telp }}</td>
                     <td>{{ $acc->pengajuan->alamat }}</td>
                   </tr>

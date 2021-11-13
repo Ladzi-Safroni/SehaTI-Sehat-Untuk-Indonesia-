@@ -2,12 +2,17 @@
 @include('master/common/aside')
 
 @section('admin')
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <div class="container-fluid">
+      @if ($message = Session::get('success'))
+      <div class="alert alert-success alert-block">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>{{ $message }}</strong>
+      </div>
+      @endif
       <div class="row mb-2">
         <div class="col-sm-6">
           <h1>Hii Admin, {{ Auth::user()->name }}</h1>
@@ -32,7 +37,7 @@
 
             <!-- /.card-header -->
             <div class="card-body p-0">
-              <table class="table table-striped text-center">
+              <table class="table table-striped text-center table-responsive">
                 <thead class="thead-dark">
                   <tr>
                     <th style="width: 10px">No.</th>
@@ -55,16 +60,20 @@
                     <td>{{ $pengajuan->namaLengkap }}</td>
                     <td>{{ $pengajuan->tempat }}</td>
                     <td>{{ $pengajuan->tanggal }}</td>
-                    <td>{{ $pengajuan->jk }}</td>
+                    @if ($pengajuan->jk == "L")
+                    <td>Laki-Laki</td>
+                    @else
+                    <td>Perempuan</td>
+                    @endif
                     <td>{{ $pengajuan->telp }}</td>
                     <td>{{ $pengajuan->alamat }}</td>
                     @if ($pengajuan->status == null)
                     <td>
-                      <a href="" class="btn btn-danger">Belum Verifikasi</a>
+                      <a class="btn btn-danger">Belum Diverifikasi</a>
                     </td>
                     @else
                     <td>
-                      <a href="" class="btn btn-success">Sudah Verifikasi</a>
+                      <a class="btn btn-success">Sudah Diverifikasi</a>
                     </td>
                     @endif
                     <td>

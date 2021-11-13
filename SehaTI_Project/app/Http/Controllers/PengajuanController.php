@@ -40,7 +40,7 @@ class PengajuanController extends Controller
 
         Pengajuan::create($validateData);
 
-        return redirect('/user');
+        return redirect('/user')->with('success', 'Anda telah Mengajukan Pendaftaran Vaksinasi');
     }
 
     public function show($id)
