@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Approve;
 use App\Models\Pengajuan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class AdminController extends Controller
 {
     public function index()
     {
-        $pengajuans = Pengajuan::orderBy('id')->paginate(3);
+        $pengajuans = Pengajuan::orderBy('id')->paginate(4);
         return view('master.admin', compact('pengajuans'));
     }
 

@@ -66,6 +66,9 @@
           </div>
           <!-- /.col -->
         </table>
+          <div class="d-flex justify-content-center">
+            {{ $approves->links() }}
+          </div>
       </div>
       <!-- /.row -->
     </div><!-- /.container-fluid -->

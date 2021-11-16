@@ -15,7 +15,7 @@
 
         <!--custom js file link-->
         <script src="{{asset('js/script.js')}}"></script>
-        <title>SehaTI | Home</title>
+        <title>SehaTI | Sehat Untuk Indonesia</title>
     </head>
     <body>
      <!--header sectiom start--> 
