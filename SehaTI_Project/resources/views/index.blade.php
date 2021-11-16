@@ -221,7 +221,7 @@
             <h2>Covid-19 dan Vaksinasi</h2>
         </div>   
         <div class="peta-img">
-            <img src="image/peta.png" alt="">
+            <img src="image/statistika_covid.jpeg" alt="">
         </div>    
         </section>
         <!--peta sectiom end-->

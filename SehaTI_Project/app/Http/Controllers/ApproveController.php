@@ -11,7 +11,7 @@ class ApproveController extends Controller
     public function index()
     {
         $approve = Approve::all();
-        $approve = Approve::orderBy('id')->paginate(5);
+        $approve = Approve::orderBy('id')->paginate(12);
         return view('master.pengumuman', ['approves' => $approve]);
     }
 }

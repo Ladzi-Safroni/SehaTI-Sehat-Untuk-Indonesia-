@@ -9,7 +9,7 @@ class Pengajuan extends Model
 {
     use HasFactory;
     protected $table = 'pengajuans';
-    protected $fillable = ['nik','namaLengkap','tempat','tanggal','jk','telp','alamat','ktp','kk', 'status'];
+    protected $fillable = ['id','nik','namaLengkap','tempat','tanggal','jk','telp','alamat','ktp','kk', 'status'];
 
     public function approve()
     {

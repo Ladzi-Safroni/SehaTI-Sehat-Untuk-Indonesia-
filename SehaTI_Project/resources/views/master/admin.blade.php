@@ -55,7 +55,7 @@
                 <tbody>
                   @foreach ($pengajuans as $pengajuan)
                   <tr>
-                    <td>{{ $pengajuans->count() * ($pengajuans->currentPage() -1) + $loop->iteration }}</td>
+                    <td>{{ $pengajuan->id }}</td>
                     <td>{{ $pengajuan->nik }}</td>
                     <td>{{ $pengajuan->namaLengkap }}</td>
                     <td>{{ $pengajuan->tempat }}</td>

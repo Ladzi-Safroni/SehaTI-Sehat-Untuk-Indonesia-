@@ -11,7 +11,7 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $pengajuans = Pengajuan::orderBy('id')->paginate(4);
+        $pengajuans = Pengajuan::paginate(4);
         return view('master.admin', compact('pengajuans'));
     }
 

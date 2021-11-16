@@ -45,7 +45,7 @@
                 <tbody>
                   @foreach ($approves as $acc)
                   <tr>
-                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $acc->id }}</td>
                     <td>{{ $acc->pengajuan->nik }}</td>
                     <td>{{ $acc->pengajuan->namaLengkap }}</td>
                     @if ($acc->pengajuan->jk == "L")
